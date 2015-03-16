@@ -1,4 +1,4 @@
-package kawac.common.natives;
+package kawac.common.lib.natives;
 
 import kawac.api.natives.AbstractNativeWrapper;
 

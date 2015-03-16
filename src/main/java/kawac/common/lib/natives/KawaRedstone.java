@@ -1,4 +1,4 @@
-package kawac.common.natives;
+package kawac.common.lib.natives;
 
 import kawac.api.natives.AbstractNativeWrapper;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -33,7 +33,7 @@ extends AbstractNativeWrapper{
     public ForgeDirection direction(String name){
         try{
             if(ForgeDirection.valueOf(name.toUpperCase()) != null){
-                return ForgeDirection.valueOf(name);
+                return ForgeDirection.valueOf(name.toUpperCase());
             } else{
                 return ForgeDirection.UNKNOWN;
             }

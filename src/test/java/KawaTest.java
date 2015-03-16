@@ -1,7 +1,7 @@
 import kawac.api.NativesRegistry;
-import kawac.common.natives.KawaOS;
-import kawac.common.natives.KawaRedstone;
-import kawac.common.natives.KawaSerializer;
+import kawac.common.lib.natives.KawaOS;
+import kawac.common.lib.natives.KawaRedstone;
+import kawac.common.lib.natives.KawaSerializer;
 import org.junit.Test;
 
 import java.io.InputStreamReader;
