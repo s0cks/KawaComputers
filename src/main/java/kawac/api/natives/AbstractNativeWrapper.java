@@ -1,12 +1,12 @@
 package kawac.api.natives;
 
-public abstract class AbstractNativeScript{
+public abstract class AbstractNativeWrapper{
     public abstract String getName();
 
     @Override
     public final boolean equals(Object obj){
-        if(obj instanceof AbstractNativeScript){
-            return ((AbstractNativeScript) obj).getName().equalsIgnoreCase(this.getName());
+        if(obj instanceof AbstractNativeWrapper){
+            return ((AbstractNativeWrapper) obj).getName().equalsIgnoreCase(this.getName());
         } else{
             return false;
         }

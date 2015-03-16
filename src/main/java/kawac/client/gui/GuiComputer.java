@@ -31,4 +31,9 @@ extends GuiScreen{
     public void drawScreen(int x, int y, float f){
         RenderUtils.drawColoredQuad(0x000000, this.guiLeft, this.guiTop, this.zLevel, WIDTH, HEIGHT);
     }
+
+    @Override
+    public boolean doesGuiPauseGame(){
+        return false;
+    }
 }

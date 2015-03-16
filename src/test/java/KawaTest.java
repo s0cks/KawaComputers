@@ -1,6 +1,7 @@
 import kawac.api.NativesRegistry;
 import kawac.common.natives.KawaOS;
 import kawac.common.natives.KawaRedstone;
+import kawac.common.natives.KawaSerializer;
 import org.junit.Test;
 
 import java.io.InputStreamReader;
@@ -15,6 +16,7 @@ public final class KawaTest{
         ScriptEngine kawa = NativesRegistry.getKawa();
         NativesRegistry.registerNative(new KawaOS());
         NativesRegistry.registerNative(new KawaRedstone());
+        NativesRegistry.registerNative(new KawaSerializer());
         kawa.setBindings(NativesRegistry.createBindings(kawa), ScriptContext.ENGINE_SCOPE);
         kawa.eval(new InputStreamReader(getClass().getResourceAsStream("KawaTest.scm")));
     }

@@ -1,9 +1,9 @@
 package kawac.common.natives;
 
-import kawac.api.natives.AbstractNativeScript;
+import kawac.api.natives.AbstractNativeWrapper;
 
 public final class KawaOS
-extends AbstractNativeScript{
+extends AbstractNativeWrapper{
     @Override
     public String getName(){
         return "os";

@@ -8,6 +8,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -45,7 +46,9 @@ public final class KawaComputers{
 
     @EventHandler
     public void onInit(FMLInitializationEvent e){
+        KawaCBlocks.register();
 
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new KawaCGuiHandler());
     }
 
     @EventHandler
