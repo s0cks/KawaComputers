@@ -9,6 +9,8 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.EntityRegistry;
+import kawac.common.entity.EntityRobit;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -41,7 +43,8 @@ public final class KawaComputers{
 
     @EventHandler
     public void onPreInit(FMLPreInitializationEvent e){
-
+        proxy.initRenders();
+        proxy.initHandlers();
     }
 
     @EventHandler
@@ -49,6 +52,7 @@ public final class KawaComputers{
         KawaCBlocks.register();
 
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new KawaCGuiHandler());
+        EntityRegistry.registerGlobalEntityID(EntityRobit.class, "Robit", 127, 0xFF6699, 0x000000);
     }
 
     @EventHandler

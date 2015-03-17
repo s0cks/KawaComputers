@@ -27,4 +27,11 @@ public final class RenderUtils{
     public static void drawColoredQuad(int color, double x, double y, double z, double w, double h){
         drawColoredQuad(color, 255, x, y, z, w, h);
     }
+
+    public static int blend(int r, int g, int b){
+        int rgb = r;
+        rgb = (rgb << 8) + g;
+        rgb = (rgb << 8) + b;
+        return rgb;
+    }
 }
